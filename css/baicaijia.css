@@ -1,0 +1,245 @@
+body,
+html,
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Microsoft YaHei";
+}
+li,
+ol,
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+}
+#header {
+  height: 50px;
+  background-color: #C0072F;
+  padding: 0;
+}
+#header .back h1 {
+  margin: 0;
+  padding: 0;
+  font-size: 30px;
+  text-align: center;
+  line-height: 50px;
+  color: #fff;
+}
+.coupon-title > .bcj-head-cat {
+  height: 38px;
+  display: -webkit-box;
+  border-bottom: 1px solid #eeeeee;
+  position: relative;
+}
+.coupon-title > .bcj-head-cat .ul-wapper {
+  overflow: hidden;
+}
+.coupon-title > .bcj-head-cat .ul-wapper > .tabs {
+  background-color: #FFFFFF;
+  border-bottom: none;
+  display: -webkit-box;
+  -webkit-box-flex: 1;
+  margin-bottom: 0;
+}
+.coupon-title > .bcj-head-cat .ul-wapper > .tabs > li {
+  height: 38px;
+  font-size: 14px;
+  line-height: 36px;
+}
+.coupon-title > .bcj-head-cat .ul-wapper > .tabs > li > a {
+  color: #333333;
+  display: inline-block;
+  font-weight: 500;
+  text-align: center;
+  overflow: hidden;
+  float: left;
+  padding: 0 12px;
+  width: auto;
+  box-sizing: content-box;
+}
+.coupon-title > .bcj-head-cat .ul-wapper > .tabs > li.active a {
+  color: #C0072F;
+  border-bottom: 2px solid #C0072F;
+}
+.coupon-title > .bcj-head-cat > .searchbtn > .icon-search {
+  background-image: url("data:image/svg+xml;charset=utf-8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1024 1024' width='17' height='17'><path fill='#565656' d='M978.261333 430.321067c0 157.2864-127.488 284.808533-284.8768 284.808533-157.218133 0-284.706133-127.488-284.706133-284.808533s127.488-284.7744 284.706133-284.7744c22.254933 0 43.793067 2.798933 64.648533 7.68l63.2832-192.136533c3.208533-9.352533 14.916267-14.062933 26.248533-10.410667 11.298133 3.720533 17.8176 14.5408 14.848 23.8592l-63.249067 191.488C904.055467 208.078933 978.261333 310.4448 978.261333 430.321067zM693.384533 184.834133c-135.5776 0-245.384533 109.909333-245.384533 245.521067 0 135.611733 109.943467 245.486933 245.384533 245.486933 135.68 0 245.521067-109.909333 245.521067-245.486933C938.939733 294.7776 829.064533 184.834133 693.384533 184.834133zM366.4896 683.863467l-18.261333 0L98.6112 683.863467c-12.049067 0-21.8112-9.762133-21.8112-21.777067 0-12.049067 9.762133-21.8112 21.8112-21.8112l249.617067 0 5.461333 0c9.147733 15.189333 19.114667 29.832533 30.139733 43.588267L366.4896 683.863467zM297.7792 457.866667 277.6064 457.866667 98.6112 457.866667c-12.049067 0-21.8112-9.762133-21.8112-21.777067 0-12.0832 9.762133-21.8112 21.8112-21.8112l176.708267 0c0 0 0 0 0 0.034133l22.459733 0c-0.4096 7.236267-1.092267 14.404267-1.092267 21.777067S297.3696 450.6304 297.7792 457.866667zM348.2624 231.869867 326.3488 231.869867 98.6112 231.869867c-12.049067 0-21.8112-9.659733-21.8112-21.8112 0-12.0832 9.762133-21.742933 21.8112-21.742933l249.617067 0 5.973333 0 12.288 0 17.339733 0c-11.025067 13.755733-20.923733 28.3648-30.071467 43.52L348.2624 231.835733zM605.3888 5.975467l-127.0784 0-122.538667 0L337.544533 5.975467 87.927467 5.975467c-12.049067 0-21.8112-9.762133-21.8112-21.845333 0-12.0832 9.762133-21.879467 21.8112-21.879467l249.617067 0 18.261333 0 122.538667 0 127.044267 0 78.711467 0-16.0768 43.6224L605.3888 5.975467z' transform='translate(0, 812) scale(1, -1)'/></svg>");
+  position: absolute;
+  background-color: #eee;
+  top: 0;
+  right: 0;
+  width: 38px;
+  height: 38px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 22px auto;
+}
+.coupon-title .quan_banner {
+  width: 100%;
+}
+.coupon-title .container {
+  font-size: 14px;
+  max-width: 960px;
+  margin: 0px auto;
+}
+.coupon-title .container .ui-border-tb {
+  margin: 6px auto;
+  background-color: #ffffff;
+  position: relative;
+  padding: 10px 5px;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+.coupon-title .container .ui-border-tb > a {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  z-index: 1;
+}
+.coupon-title .container .pic {
+  float: left;
+  width: 135px;
+  height: 130px;
+}
+.coupon-title .container .pic > img {
+  width: 130px;
+}
+.coupon-title .container .inf .i {
+  height: auto;
+}
+.coupon-title .container .inf .i > .t {
+  min-height: 28px;
+  max-height: 40px;
+  line-height: 1.5;
+  font-weight: 400;
+  text-align-last: left;
+  -webkit-line-clamp: 2;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.coupon-title .container .inf .i > .pr {
+  font-size: 18px;
+  color: #fc353a;
+  margin-top: 4px;
+  position: relative;
+  width: 100%;
+  height: auto;
+  overflow: visible;
+}
+.coupon-title .container .inf .i > .pr > em {
+  font-size: 12px;
+  vertical-align: middle;
+  font-style: normal;
+}
+.coupon-title .container .inf .i > .pr > del {
+  text-decoration: line-through;
+  font-size: 13px;
+  color: #a8a8a8;
+  margin-left: 12px;
+  vertical-align: middle;
+}
+.coupon-title .container .inf .o {
+  position: absolute;
+  bottom: 10px;
+  padding: 0px 5px 0px 135px;
+  box-sizing: border-box;
+  width: 100%;
+}
+.coupon-title .container .inf .o > .b {
+  margin-top: -5px;
+}
+.coupon-title .container .inf .o > .b > .q {
+  position: absolute;
+  top: 6px;
+  left: 135px;
+}
+.coupon-title .container .inf .o > .b > .q > a {
+  border: 1px dotted #e4393c;
+  height: 26px;
+  line-height: 26px;
+  text-align: center;
+  display: block;
+  padding: 0px 5px;
+  font-size: 12px;
+  color: #e4393c;
+  position: relative;
+  z-index: 1;
+}
+.coupon-title .container .inf .o > .b > .g {
+  float: right;
+  margin-right: 5px;
+}
+.coupon-title .container .inf .o > .b > .g > a {
+  height: 38px;
+  line-height: 38px;
+  text-align: center;
+  display: block;
+  background-color: #ff5e5d;
+  color: #ffffff;
+  border-radius: 4px;
+  padding: 0px 10px;
+  font-size: 12px;
+  position: relative;
+  z-index: 1;
+}
+.coupon-title .container .inf .o > .bar {
+  height: 25px;
+  overflow: hidden;
+  line-height: 25px;
+}
+.coupon-title .container .inf .o > .bar a {
+  display: block;
+  position: absolute;
+  width: 120px;
+  height: 60px;
+  bottom: 0px;
+  left: 130px;
+  z-index: 3;
+}
+.coupon-title .container .inf .o > .bar b {
+  font-weight: normal;
+  font-size: 12px;
+  color: #666;
+  vertical-align: 3px;
+}
+.coupon-title .container .inf .o > .bar > i {
+  position: relative;
+  box-sizing: border-box;
+  width: 82px;
+  height: 14px;
+  border: 1px solid #fc353a;
+  border-radius: 6px;
+  color: #fff;
+  font-weight: 900;
+  background: #ffb7b7;
+  text-align: center;
+  overflow: hidden;
+  display: inline-block;
+}
+.coupon-title .container .inf .o > .bar > i > em {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  border-radius: 5px;
+  background: #fc353a;
+  display: block;
+}
+.coupon-title .container .inf .o > .bar > i > span {
+  font-size: 12px;
+  line-height: 11px;
+  display: block;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}

@@ -1,0 +1,293 @@
+.gnzk .header {
+  background: #ff841d;
+  color: #FFFFFF;
+  height: 44px;
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+.gnzk .header .icon-back {
+  height: 100%;
+  width: 20px;
+}
+.gnzk .header h1 {
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  margin: 0;
+  line-height: 44px;
+}
+.gnzk .header .icon-down {
+  height: 100%;
+  width: 20px;
+}
+.back{
+  width: 100%;
+  height: 100%;
+  display: block;
+  overflow: hidden;
+}
+.back:after{
+  height: 20px;
+  height: 20px;
+  transform-origin: center center;
+  -webkit-transform: rotateZ(45deg) translateX(15px) ;
+  -moz-transform: rotateZ(45deg) translateX(15px) ;
+  -ms-transform: rotateZ(45deg) translateX(15px) ;
+  -o-transform: rotateZ(45deg) translateX(15px) ;
+  transform: rotateZ(45deg) translateX(15px) ;
+  border: 2px solid white;
+  content: '';
+  display: block;
+}
+.gnzk .gnzk-main {
+  max-width: 960px;
+  background-color: #ffffff;
+  text-align: left;
+  font-size: -24px;
+  margin: 0px auto;
+}
+.gnzk .gnzk-main ul {
+  width: 100%;
+  display: table;
+  padding: 0 0px 10px 0;
+  font-size: 0;
+  white-space: normal;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.gnzk .gnzk-main ul li {
+  text-align: center;
+  vertical-align: middle;
+  background: none;
+  width: 50%;
+  background: #FFFFFF;
+  border: 1px solid #eeeeee;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+.gpg{
+  float: right;
+  width: 120px;
+}
+.gpg img{
+  display: block;
+  width: 100%;
+}
+.con{
+  width: 100%;
+}
+.gnzk .gnzk-main ul li .img {
+  margin: 10px auto;
+  overflow: hidden;
+  width: 140px;
+  height: 140px;
+}
+.gnzk .gnzk-main ul li .img img {
+  display: block;
+  width: 100%;
+}
+.gnzk .gnzk-main ul li .tit {
+  color: #333333;
+  padding: 0 8px;
+  font-size: 14px;
+  text-align: left;
+  line-height: 18px;
+  height: 36px;
+  overflow: hidden;
+}
+.gnzk .gnzk-main ul li .red {
+  color: #ff6c00;
+  margin-top: 4px;
+  font-size: 14px;
+  padding: 0 8px;
+  text-align: left;
+  overflow: hidden;
+  height: 18px;
+  line-height: 18px;
+}
+.gnzk .gnzk-main ul li .info {
+  color: #a1a1a1;
+  font-size: 12px;
+  text-align: left;
+  padding: 6px 8px;
+}
+.gnzk .gnzk-show .pro-show {
+  padding: 4px 10px;
+}
+.gnzk .gnzk-show .pro-show .tit {
+  font-size: 18px;
+  margin: 10px auto 5px auto;
+  font-weight: 800;
+  text-align: left;
+  color: #5a5a5a;
+}
+.gnzk .gnzk-show .pro-show .mon {
+  color: #ff6c00;
+  display: block;
+  font-size: 15px;
+}
+.gnzk .gnzk-show .pro-show .info {
+  margin: 12px auto;
+  color: #999999;
+  font-size: 12px;
+}
+.gnzk .gnzk-show .pro-show .info span {
+  margin: 0;
+  padding-right: 5px;
+}
+.gnzk .gnzk-show .pro-show .pro-comcon {
+  line-height: 24px;
+  color: #606060;
+  word-break: break-all;
+  margin: 6px auto;
+}
+.gnzk .gnzk-show .pro-show .con img {
+  width: 120px;
+  height: 120px;
+}
+.gnzk .gnzk-show .pro-show .linkToBuy {
+  text-decoration: none;
+  display: block;
+  margin: 20px 10px;
+  background: #FF9000;
+  height: 30px;
+  border-radius: 4px;
+  line-height: 30px;
+  text-align: center;
+  font-size: 14px;
+  color: #ffffff;
+}
+.gnzk .comment h3 {
+  font-size: 24px;
+  padding: 10px;
+  margin: 0;
+  font-weight: 900;
+}
+.gnzk .comment form {
+  border: 2px solid rgba(128, 128, 128, 0.7);
+  background-color: #FBFBFB;
+}
+.gnzk .comment #com {
+  width: 100%;
+  outline: none;
+  height: 100%;
+  border: none;
+  border-bottom: 1px solid rgba(128, 128, 128, 0.42);
+  float: right;
+  background-color: white;
+}
+.gnzk .comment #button {
+  width: 100px;
+  height: 45px;
+  line-height: 45px;
+  color: whitesmoke;
+  text-align: center;
+  font-weight: 700;
+  font-size: 20px;
+  float: right;
+  border: none;
+  padding: 0;
+  margin: 0;
+  background-color: orange;
+}
+.gnzk .comment .newMessage h3 {
+  color: gray;
+}
+.gnzk .comment .newMessage .head {
+  float: left;
+  width: 50px;
+  height: 50px;
+  background-color: hotpink;
+  border: 1px solid #000;
+  -webkit-border-radius: 25px;
+  -moz-border-radius: 25px;
+  border-radius: 25px;
+}
+.gnzk .comment .newMessage .message {
+  padding-left: 10px;
+}
+.gnzk .comment .newMessage .message .messageTit {
+  font-size: 15px;
+}
+.gnzk .comment .newMessage .message .messageTit .messageName {
+  padding-left: 10px;
+  color: cornflowerblue;
+}
+.gnzk .comment .newMessage .message .messageTit .messageTime {
+  color: rgba(128, 128, 128, 0.46);
+  float: right;
+  padding-right: 10px;
+}
+.gnzk .comment .newMessage .message .messageCon {
+  font-size: 20px;
+  color: gray;
+}
+.gnzk .footer .footer-menu {
+  height: 36px;
+  background-color: #ebebeb;
+  background: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#ebebeb));
+  background: -moz-linear-gradient(top, #ffffff, #ebebeb);
+  background: -o-linear-gradient(top, #ffffff, #ebebeb);
+  border-top: solid 1px #ebebeb;
+  border-bottom: 1px solid #ccc;
+  line-height: 36px;
+  padding-left: 8px;
+  font-size: 14px;
+}
+.gnzk .footer .footer-menu ul{
+  display: flex;
+  justify-content: flex-start;
+}
+.wx{
+  display: block;
+  width: 100%;
+}
+.gnzk .footer .footer-menu ul li{
+  list-style: none;
+  margin-right: 5px;
+}
+
+.gnzk .footer .footer-bottom {
+  background: #efefef;
+  border-top: 1px solid #c4c4c4;
+  border-bottom: 1px solid #c4c4c4;
+  height: 34px;
+  line-height: 34px;
+  margin-top: 25px;
+}
+.gnzk .footer .footer-bottom a {
+  color:black;
+  text-decoration: none;
+  padding: 0;
+  text-align: center;
+  border-right: 1px solid gray;
+}
+.gnzk .footer .footer-src {
+  background: #efefef;
+  border-bottom: 1px solid #c4c4c4;
+}
+.gnzk .footer .footer-src ul {
+  width: 100%;
+  text-align: center;
+  padding-left: 190px;
+  padding-top: 10px;
+}
+.gnzk .footer .footer-src ul li {
+  list-style: none;
+  float: left;
+}
+.gnzk .footer .footer-src ul li a {
+  text-decoration: none;
+  padding: 0;
+  color: black;
+  text-align: center;
+}
+.gnzk .footer .footer-src ul li .red {
+  color: red;
+}
+.gnzk .footer .footer-src p {
+  text-align: center;
+}

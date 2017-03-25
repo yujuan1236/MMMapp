@@ -1,0 +1,60 @@
+a {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+}
+li {
+  list-style: none;
+}
+ul {
+  padding: 0;
+  margin: 0;
+}
+#header {
+  width: 100%;
+  height: 44px;
+  line-height: 44px;
+  font-size: 20px;
+  color: #ffffff;
+  background-color: orange;
+}
+#header > #arrow {
+  float: left;
+  padding-left: 20px;
+  color: #fff;
+}
+#header > #title {
+  text-align: center;
+}
+#tit {
+  display: flex;
+  border-bottom: 1px solid #dadada;
+}
+#tit > .left {
+  float: left;
+  width: 100%;
+}
+#tit > .left > ul {
+  width: 100%;
+}
+#tit > .left > ul > li {
+  float: left;
+  line-height: 37px;
+  text-align: center;
+  width: 30%;
+  height: 37px;
+}
+#tit > .left > ul > li > a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  color: #5a5a5a;
+  font-size: 16px;
+}
+#tit > .search {
+  float: right;
+  width: 40px;
+  height: 40px;
+  border-left: 1px solid #dadada;
+}

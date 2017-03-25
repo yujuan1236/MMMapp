@@ -1,0 +1,171 @@
+.head-logo {
+  width: 100%;
+  height: 50px;
+  background-color: #ff841d;
+  border-bottom: 1px solid #e6e6e6;
+}
+.head-logo > .logo {
+  float: left;
+  padding: 12px;
+}
+.head-logo > .logo > a {
+  display: block;
+}
+.head-logo > .logo > a > img {
+  max-height: 25px;
+  overflow: hidden;
+}
+.head-logo > .load {
+  padding: 7px;
+  float: right;
+}
+.head-logo > .load > a {
+  display: block;
+}
+.head-logo > .load > a > img {
+  max-height: 34px;
+  overflow: hidden;
+}
+form > .search {
+  border-bottom: 1px solid #e6e6e6;
+  padding: 10px;
+  position: relative;
+  background-color: White;
+}
+form > .search > .search-inp {
+  border: none;
+  background: #f1f1f1;
+  margin: 0px;
+  height: 30px;
+  line-height: 30px;
+  border-radius: 15px;
+  padding-left: 10px;
+  width: 90%;
+  padding-left: 5%;
+  font-size: 16px;
+}
+form > .search > .search-btn {
+  width: 63px;
+  background: #ff841d;
+  color: #FFFFFF;
+  border: none;
+  height: 30px;
+  line-height: 30px;
+  border-radius: 15px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 16px;
+}
+.brandTitle .mn_nav {
+  background: #F3F3F3;
+  height: 36px;
+  margin: 5px 5px 0px 5px;
+  overflow: hidden;
+}
+.brandTitle .mn_nav ul li {
+  line-height: 36px;
+  float: left;
+  margin-left: 20px;
+}
+.brandTitle .mn_nav ul li a {
+  color: black;
+}
+.brandTitle .mn_nav .click {
+  float: right;
+  border: 1px solid #CCCCCC;
+  border-radius: 5px;
+  text-align: center;
+  color: black;
+  width: 54px;
+  height: 30px;
+  line-height: 30px;
+  margin-top: -8px;
+  margin-right: 20px;
+}
+.brandTitle .mn_brank_num {
+  width: 100%;
+}
+.brandTitle .mn_brank_num .hotbrank {
+  margin: 10px 5px 5px 5px;
+  padding: 5px 10px;
+  background: #F3F3F3;
+}
+.brandTitle .mn_brank_num .hotbrank h4 {
+  font-size: 18px;
+  color: #874604;
+}
+.brandTitle .mn_brank_num .mn_tenbrand {
+  width: 100%;
+}
+.brandTitle .mn_brank_num .mn_tenbrand li {
+  background: #F3F3F3;
+  padding: 10px 10px;
+  margin: 5px 5px;
+  line-height: 28px;
+  font-size: 18px;
+}
+.brandTitle .mn_brank_num .mn_tenbrand li a {
+  color: #000;
+}
+.brandTitle .mn_brank_num .mn_tenbrand li:hover a {
+  color: #23527c;
+}
+*,
+body,
+html {
+  margin: 0;
+  padding: 0;
+}
+a {
+  color: #000;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+}
+.footApp {
+  width: 100%;
+}
+.footApp > .footTop {
+  background: #efefef;
+  border-top: 1px solid #c4c4c4;
+  border-bottom: 1px solid #c4c4c4;
+  height: 34px;
+  line-height: 34px;
+  margin-top: 25px;
+  clear: both;
+}
+.footApp > .footTop > a {
+  box-sizing: border-box;
+  float: left;
+  font-size: 14px;
+  border-right: 1px solid #c4c4c4;
+  text-align: center;
+  width: 30%;
+  color: #000;
+}
+.footApp > .footTop > a:hover {
+  text-decoration: none;
+}
+.footApp > .footTop > a:nth-last-of-type(1) {
+  border-right: none;
+}
+.footApp > .footTop > a:nth-last-of-type(1) > img {
+  vertical-align: middle;
+  margin-top: -5px;
+  margin-right: 2px;
+  width: 15px;
+  height: 15px;
+}
+.footApp > .foot {
+  background: #efefef;
+  text-align: center;
+  font-size: 12px;
+  padding: 15px 0;
+  color: #666;
+}
+.footApp > .foot a:nth-of-type(1).color {
+  color: #e4393c;
+  font-weight: 500;
+}

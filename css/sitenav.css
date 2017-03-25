@@ -1,0 +1,54 @@
+#header {
+  height: 44px;
+  background-color: #ff841d;
+  width: 100%;
+}
+#header > div:nth-child(1) {
+  width: 40px;
+  height: 44px;
+  float: left;
+}
+#header > div:nth-child(1) a {
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  position: relative;
+  text-align: center;
+  line-height: 50px;
+}
+#header > div:nth-child(1) a > i {
+  color: #fff;
+  font-size: 17px;
+}
+#header h1 {
+  margin: 0;
+  font-size: 20px;
+  color: #fff;
+  text-align: center;
+  line-height: 44px;
+  font-weight: 500;
+}
+#header > a {
+  display: inline-block;
+  float: right;
+  width: 50px;
+  height: 44px;
+  background: url("../images/header_app.png") no-repeat center center;
+  -webkit-background-size: 32px;
+  background-size: 32px;
+}
+.link {
+  width: 300px;
+  margin: 10px auto;
+  float: none;
+}
+.link a {
+  padding: 10px 8px;
+  background: #f4f4f4;
+  border: 1px solid #bfbfbf;
+  float: left;
+  margin: 0 0 5px 5px;
+}
+.link a img {
+  margin-right: 5px;
+}

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>慢慢买手机版——品牌大全商品列表</title>
+    <!--icon图标-->
+    <link rel = "shortcut icon" href='favicon.ico'>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <link rel="stylesheet" href="css/base.css"/>
+    <link rel="stylesheet/less" href="css/mn_history.less"/>
+    <link rel="stylesheet" href="css/mn_brand.css"/>
+    <script src="lib/jquery/jquery.js"></script>
+    <!--<script src="lib/less/less.min.js"></script>-->
+</head>
+<body>
+<div class="mn_brand clearfix">
+    <!-- 导航栏-->
+    <nav>
+        <ul class="mn_nav_left clearfix">
+            <li><a href="index.html">首页&lt;</a></li>
+            <li><a href="brandTitle.html">品牌大全&lt;</a></li>
+            <li><a href="brand.html">全部分类&lt;</a></li>
+        </ul>
+        <a class="click" href="#">筛选</a>
+    </nav>
+    <div class="mn_question">平板电脑哪个牌子好</div>
+    <!-- 电视种类-->
+    <div class="mn_tv">
+    </div>
+    <!-- 电视排行-->
+    <div class="mn_sales">
+    </div>
+    <!--//评论-->
+    <div class="mn_comment">
+    </div>
+</div>
+<!--底部-->
+<div class="footApp">
+    <div class="footTop">
+        <a href="http://m.manmanbuy.com/login.aspx">登录</a>
+        <a href="">注册</a>
+        <a href="#"><img src="images/foot-top.jpg" alt=""/>返回顶部</a>
+    </div>
+    <div class="foot">
+        <p>
+            <a href="" class="color">手机APP下载</a>
+            <a href="">慢慢买手机版</a>
+            -- 掌上比价平台
+        </p>
+
+        <p> m.manmanbuy.com</p>
+    </div>
+</div>
+
+</body>
+<script type="javascript/template" id="mn_brabd">
+    {{each result as brand i}}
+    <div class="mn_tv_content">
+        <b class="brand_color">{{i+1}}</b>
+        <ul>
+            <li class="mn_first"><a href="#">{{brand.brandName}}</a></li>
+            <li class="mn_two"><a href="#">{{brand.brandInfo}}</a></li>
+        </ul>
+    </div>
+    {{/each}}
+</script>
+<script type="javascript/template" id="sales">
+    <div class="mn_ranking hd">
+        <h3>平板电视产品销量排行</h3>
+    </div>
+    {{each result as sales i}}
+
+    <div class="product-list" {{data=sales.productListId}}>
+        <div class="media">
+            <a class="media-left" href="">
+                {{#sales.productImg}}
+            </a>
+            <div class="media-body">
+                <a href="">
+                    <h5> {{sales.productName}}</h5>
+                    <p class="price">{{sales.productPrice}}</p>
+                    <span>{{sales.productQuote}}</span><span>{{sales.productCom}}</span>
+                </a>
+            </div>
+        </div>
+    </div>
+    {{/each}}
+</script>
+<script type="javascript/template" id="comment">
+    <div class="new-comment hd">
+        <h3>平板电视最新评论</h3>
+    </div>
+    {{each result as comment i}}
+    <div class="comment-list">
+        <ul>
+            <li>
+                <a href="">
+                    <div class='comment-top clearfix'>
+                        <div class="pic">
+                        </div>
+                        <div class="tit">乐视TV(Letv) 超3 X55 55英寸智能LED液晶 超级电视 4K超清电视</div>
+                    </div>
+                    <div class="comment-body clearfix">
+                        <div class="name">
+                            <span class="n">{{comment.comName}}</span>
+                            <span class="star5">
+                                <em>★★★★</em>
+                            </span>
+                            <span class="date">{{comment.comTime}}</span>
+                        </div>
+                        <div class="con">
+                            {{comment.comContent}}
+                        </div>
+                    </div>
+                </a>
+            </li>
+        </ul>
+    </div>
+    {{/each}}
+</script>
+<script src="js/mn_brand.js"></script>
+<script src="lib/template/template.js"></script>
+</html>

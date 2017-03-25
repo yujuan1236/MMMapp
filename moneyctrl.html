@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <title>慢慢买手机版——省钱控</title>
+    <!--icon图标-->
+    <link rel = "shortcut icon" href='favicon.ico'>
+    <!--引入bootstrap-->
+    <link rel="stylesheet" href="./lib/bootstrap/css/bootstrap.min.css"/>
+    <!--引入自己的css-->
+    <link rel="stylesheet/less" href="./css/moneyctrl.less"/>
+    <!--引入底部css-->
+    <link rel="stylesheet/less" href="./css/foot.less"/>
+    <!--引入less-->
+    <script src="./lib/less/less.min.js"></script>
+    <title></title>
+</head>
+<body>
+<!--顶部通栏-->
+<header id="header">
+    <div>
+        <a href="index.html"><i class="glyphicon glyphicon-menu-left"></i></a>
+    </div>
+    <a href="#">
+
+    </a>
+
+    <h1>省钱控 - 最新优惠</h1>
+
+</header>
+<!--单件商品-->
+<div class="money"></div>
+
+</div>
+</div>
+<div class="footApp">
+    <div class="footTop">
+        <a href="http://m.manmanbuy.com/login.aspx">登录</a>
+        <a href="">注册</a>
+        <a href="#"><img src="images/foot-top.jpg" alt=""/>返回顶部</a>
+    </div>
+    <div class="foot">
+        <p>
+            <a href="" class="color">手机APP下载</a>
+            <a href="">慢慢买手机版</a>
+            -- 掌上比价平台
+        </p>
+
+        <p> m.manmanbuy.com</p>
+    </div>
+</div>
+<script type="text/html" id="html">
+    <section>
+        <ul>
+            {{each result as value i}}
+
+            <li class="clearfix">
+                <a href="moneyproduct.html?productid={{value.productId}}">
+                    <div class="pic">
+                        {{#value.productImgSm}}
+                    </div>
+                    <div class="title">
+                        <p>{{value.productName}}<span>{{value.productPinkage}}</span></p>
+                    </div>
+                    <div class="other">
+                        <span>{{value.productFrom}} {{value.productTime}}</span>
+                        <span><i class="glyphicon glyphicon-edit"></i>{{value.productComCount.replace("有","").replace("人评论","")}}</span>
+                    </div>
+
+                </a>
+            </li>
+
+            {{/each}}
+        </ul>
+    </section>
+    <div class="page clearfix">
+    <span>
+        <a href="#" class="left">上一页</a>
+    </span>
+    <span>
+      <select name="selcet" id="selectPage">
+          {{each page as value i}}
+          {{if value.pageid == pageid}}
+          <option value="{{value.pageid}}" selected="selected">{{value.pageid}}/{{value.pageCount}}</option>
+          {{else}}
+          <option value="{{value.pageid}}">{{value.pageid}}/{{value.pageCount}}</option>
+          {{/if}}
+          {{/each}}
+      </select>
+  </span>
+    <span>
+        <a href="#" class="right">下一页</a>
+    </span>
+
+    </div>
+</script>
+<!--引入jquery-->
+<script src="./lib/jquery/jquery.min.js"></script>
+<!--引入bootstrap-->
+<script src="./lib/bootstrap/js/bootstrap.min.js"></script>
+<!--引入template-->
+<script src="./lib/template/template.js"></script>
+<!--引入自己的js文件-->
+<script src="./js/moneyctrl.js"></script>
+<script>
+    (function ($) {
+        $.getUrlParam = function (name) {
+            var reg = new RegExp("(^|&)" +
+                    name + "=([^&]*)(&|$)");
+            var r = window.location.search.substr(1).match(reg);
+            if (r != null) return unescape(r[2]);
+            return null;
+        }
+    })(jQuery);
+</script>
+<!--<script>
+    var a = document.createElement('script')
+    a.src = "./js/moneyctrl.js";
+    document.querySelector('body').appendChild(a)
+    $(function () {
+        $('.page>span:nth-child(1)').on('tap', function () {
+
+        })
+    })
+</script>-->
+</body>
+</html>

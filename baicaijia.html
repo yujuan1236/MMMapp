@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>慢慢买手机版——白菜价</title>
+    <!--icon图标-->
+    <link rel = "shortcut icon" href='favicon.ico'>
+    <!--引用样式重置文件-->
+    <link rel="stylesheet/less" href="css/base.less"/>
+    <!--引用第三方的样式-->
+    <link rel="stylesheet" href="./lib/bootstrap/css/bootstrap.min.css">
+
+    <!--引用自己的样式文件-->
+    <link rel="stylesheet/less" href="css/baicaijia.less">
+    <!--引用公共底部的样式文件-->
+    <link rel="stylesheet/less" href="css/foot.less"/>
+    <!--引用less.js-->
+    <script src="./lib/less/less.min.js"></script>
+</head>
+
+<body>
+<!--头部区域-->
+<header id="header">
+    <div class="back">
+        <div class="back-last"><a href="index.html"></a></div>
+        <h1>白菜价-淘宝内部券</h1>
+        <div class="appload"><img src="images/header_app.png" alt=""/></div>
+    </div>
+</header>
+<!--//主体区域-->
+<main class="coupon-title">
+    <!--滑动菜单栏-->
+    <div class="bcj-head-cat">
+        <div class="bcj-title">
+            <div class="ul-wapper">
+
+            </div>
+        </div>
+        <div class="searchbtn">
+            <div class="icon-search"></div>
+        </div>
+    </div>
+    <!--//领券图-->
+    <img class="quan_banner" src="http://misc.manmanbuy.com/images/quanpic/quan_banner_wap.png" alt=""/>
+    <!--//下面的物品列单-->
+    <div class="container">
+        <div class="bcj-list">
+
+        </div>
+    </div>
+</main>
+
+<!--//公共底部-->
+<div class="footApp">
+    <div class="footTop">
+        <a href="http://m.manmanbuy.com/login.aspx">登录</a>
+        <a href="">注册</a>
+        <a href="#"><img src="images/foot-top.jpg" alt=""/>返回顶部</a>
+    </div>
+    <div class="foot">
+        <p>
+            <a href="" class="color">手机APP下载</a>
+            <a href="">慢慢买手机版</a>
+            -- 掌上比价平台
+        </p>
+        <p> m.manmanbuy.com</p>
+    </div>
+</div>
+</body>
+<!--//白菜价tab栏列表模板-->
+<script type="text/template" id="listTmp">
+<ul class="tabs clearfix">
+{{each result as value i}}
+    <li class=""><a href="#" data-titleid="{{#value.titleId}}">
+        {{#value.title}}
+        </a>
+    </li>
+    {{/each}}
+</ul>
+
+</script>
+<!--//白菜价列表模板-->
+<script type="text/template" id='productTmp'>
+<ul>
+    {{each result as value i}}
+    <li class="ui-border-tb ">
+
+        <a href="" class="gobuy"></a>
+        <div class="pic">
+            {{#value.productImg}}
+        </div>
+        <div class="inf">
+            <div class="i">
+                <div class="t">{{#value.productName}}</div>
+                <div class="pr">
+                    {{#value.productPrice}}
+                </div>
+            </div>
+            <div class="o">
+                <div class="b clearfix">
+                    <div class="q">{{#value.productCoupon}}</div>
+                    <div class="g">{{#value.productHref}}</div>
+                </div>
+                {{#value.productCouponRemain}}
+                <!--<div class="bar clearfix">{{#value.productCouponRemain}}-->
+                <!--</div>-->
+            </div>
+        </div>
+    </li>
+    {{/each}}
+</ul>
+</script>
+<!--引用jq-->
+<script src="./lib/jquery/jquery.js"></script>
+<!--引用bootstrap.js-->
+<script src="./lib/bootstrap/js/bootstrap.min.js"></script>
+
+<!--引用template.js-->
+<script src="./lib/template/template.js"></script>
+<!--引用自己的js-->
+<script src="js/baicaijia.js"></script>
+
+</html>

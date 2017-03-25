@@ -1,0 +1,118 @@
+@charset "utf-8";
+/* CSS Document */
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+body {
+  color: #000;
+  font-family: "Microsoft YaHei";
+  background-color: #F1F1F1;
+}
+html,
+body {
+  height: 100%;
+}
+ol,
+ul {
+  list-style: none;
+}
+input,
+select,
+form images,
+button {
+  vertical-align: middle;
+  -webkit-tap-highlight-color: transparent;
+  outline: 0;
+}
+.clearfix:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+.clearfix {
+  zoom: 1;
+}
+textarea {
+  width: 95%;
+}
+a {
+  color: #000;
+  text-decoration: none !important;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+ul,
+ol,
+li {
+  list-style: none;
+}
+em,
+i {
+  font-style: normal;
+}
+img {
+  border: none;
+}
+input,
+img {
+  vertical-align: middle;
+}
+body {
+  color: #000;
+  font-family: "Microsoft YaHei";
+  background: #f1f1f1;
+  overflow-x: hidden;
+}
+/*头部区域*/
+#header {
+  background-color: #ff841d;
+  height: 50px;
+  padding: 10px;
+}
+#header > .logo > img {
+  height: 25px;
+}
+#header > .app {
+  float: right;
+}
+#header > .app > img {
+  height: 34px;
+}
+/*搜索区域*/
+#search {
+  padding: 10px;
+  background-color: #fff;
+}
+#search > form {
+  padding-right: 70px;
+  position: relative;
+}
+#search > form > input {
+  border-radius: 15px;
+  height: 30px;
+  border: none;
+}
+#search > form > input[type="search"] {
+  width: 100%;
+  background: #f1f1f1;
+  text-indent: 15px;
+}
+#search > form > input[type="submit"] {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: #ff841d;
+  color: #fff;
+  width: 63px;
+}

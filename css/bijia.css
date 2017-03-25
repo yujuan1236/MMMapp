@@ -1,0 +1,183 @@
+body {
+  font-family: '微软雅黑', "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.head-logo {
+  width: 100%;
+  height: 50px;
+  background-color: #ff841d;
+  border-bottom: 1px solid #e6e6e6;
+}
+.head-logo > .logo {
+  float: left;
+  padding: 12px;
+}
+.head-logo > .logo > a {
+  display: block;
+}
+.head-logo > .logo > a > img {
+  max-height: 25px;
+  overflow: hidden;
+}
+.head-logo > .load {
+  padding: 7px;
+  float: right;
+}
+.head-logo > .load > a {
+  display: block;
+}
+.head-logo > .load > a > img {
+  max-height: 34px;
+  overflow: hidden;
+}
+form > .search {
+  border-bottom: 1px solid #e6e6e6;
+  padding: 10px;
+  position: relative;
+  background-color: White;
+}
+form > .search > .search-inp {
+  border: none;
+  background: #f1f1f1;
+  margin: 0px;
+  height: 30px;
+  line-height: 30px;
+  border-radius: 15px;
+  padding-left: 10px;
+  width: 90%;
+  padding-left: 5%;
+  font-size: 16px;
+}
+form > .search > .search-btn {
+  width: 63px;
+  background: #ff841d;
+  color: #FFFFFF;
+  border: none;
+  height: 30px;
+  line-height: 30px;
+  border-radius: 15px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 16px;
+}
+.nav {
+  position: relative;
+  height: 36px;
+  background-color: #ebebeb;
+  background: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#ebebeb));
+}
+.nav > ul {
+  float: left;
+}
+.nav > ul li {
+  float: left;
+  list-style: none;
+  line-height: 36px;
+  font-size: 14px;
+  padding-left: 7px;
+}
+.nav > ul li::after {
+  content: '>';
+  padding: 2px;
+}
+.nav > div {
+  line-height: 30px;
+}
+.nav > div > a {
+  position: absolute;
+  right: 10px;
+  top: 3px;
+  height: 30px color: #333;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  display: block;
+  padding: 0 7px;
+  border-radius: 5px;
+}
+.product-info > .product-top {
+  position: relative;
+  text-align: center;
+}
+.product-info > .product-top > .product-tit {
+  font-size: 17px;
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 16px;
+}
+.product-info > .product-top > .product-img {
+  display: block;
+  width: 170px;
+  height: 170px;
+  margin: 16px auto;
+}
+.product-info > .product-top > .product-shoucang {
+  position: absolute;
+  float: right;
+  margin-right: 24px;
+  right: 0px;
+  bottom: 0px;
+}
+.product-info > .product-top > .product-shoucang > a > img {
+  width: 39px;
+  height: 39px;
+}
+.product-info > .product-bottom > table {
+  width: 100%;
+}
+.product-info > .product-bottom > table .link {
+  position: relative;
+}
+.product-info > .product-bottom > table .link > .link-logo {
+  width: 15%;
+}
+.product-info > .product-bottom > table .link > .gobuy {
+  position: absolute;
+  right: 2px;
+}
+.product-info > .product-bottom > table .link > .gobuy > span {
+  display: inline-block;
+  width: 56px;
+  height: 24px;
+  border-radius: 6px;
+  text-align: center;
+  line-height: 24px;
+  background-color: #ff5500;
+  color: #fff;
+  font-size: 14px;
+}
+.product-info > .note {
+  margin-top: 5px;
+}
+.product-com > .com-tit {
+  margin-top: 5px;
+  background-color: #ebebeb;
+  background: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#ebebeb));
+  border-top: 5px solid #ebebeb;
+  height: 34px;
+  line-height: 34px;
+  text-align: center;
+  overflow: hidden;
+  font-size: 14px;
+}
+.product-com > .com-list li {
+  font-size: 12px;
+  color: #666;
+  padding: 10px;
+  padding-bottom: 0px;
+  line-height: 18px;
+  margin-top: 3px;
+  border-bottom: 1px solid #ccc;
+}
+.product-com > .com-list li > .d1 > .com-name {
+  float: left;
+}
+.product-com > .com-list li > .d1 > .com-date {
+  float: right;
+}
+.product-com > .com-list li > .com-add > .com-star {
+  color: orange;
+  float: left;
+}
+.product-com > .com-list li > .com-add > .com-add1 {
+  float: right;
+}

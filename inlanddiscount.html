@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <title>慢慢买比价网——手机版</title>
+    <!--icon图标-->
+    <link rel = "shortcut icon" href='favicon.ico'>
+</head>
+<link rel="stylesheet" href="css/mmm.css"/>
+<link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css"/>
+<body class="gnzk">
+<header class="header">
+    <a href="index.html" class="icon-back">
+    <i class="back"></i>
+    </a>
+
+    <h1>国内折扣</h1>
+
+    <a href="javascript;" class="icon-down"></a>
+
+
+</header>
+<main class="gnzk-main">
+    <ul id='pro' class="clearfix proBox">
+
+    </ul>
+
+</main>
+<footer class="footer">
+    <div class="footer-menu"></div>
+    <div class="footer-bottom">
+        <div class="container">
+            <a href="" class="col-xs-4">登陆</a>
+            <a href="" class="col-xs-4">注册</a>
+            <a href="" class="col-xs-4">回到顶部</a>
+        </div>
+    </div>
+    <div class="footer-src">
+        <ul class="clearfix">
+            <li><a href="" class="red">手机app下载</a>
+            </li>
+            <li><a href="">慢慢买手机版</a></li>
+
+            <li>app平台</li>
+        </ul>
+        <p>www.manmanbuy.com</p>
+
+    </div>
+</footer>
+
+
+
+<script type="javascript/template" id="tem">
+    {{each li as value i}}
+
+    <li class="col-xs-6 pro"   move-data='{{value.productId}}'>
+            <div class="img">
+                {{#value.productImg}}
+            </div>
+            <p class="tit">{{value.productName}}
+            </p>
+
+            <p class="red">{{value.productPrice}}</p>
+
+            <p class="info">
+                {{value.productFrom}}|
+                {{value.productTime}}
+            </p>
+
+    </li>
+
+
+
+    {{/each}}
+
+</script>
+<script src="lib/template/template.js"></script>
+<script src="lib/jquery/jquery.min.js"></script>
+<script>
+var li=document.getElementsByClassName('pro')[0];
+$(function(){
+    creatlist()
+
+})
+function run(){
+    $('.proBox').on('click','.pro',function(){
+        var id=$(this).attr('move-data');
+        window.location.href='./mmm-move.html?productid='+id+''
+    })
+}
+function creatlist() {
+
+    $.ajax({
+        type: "get",
+        url: "http://139.199.157.195:9090/api/getinlanddiscount",
+        success: function (s) {
+            var list=s.result;
+            var x=0;
+            var cs=4;
+            if($('body').height()<300){
+                cs=10;
+                var lists =list.slice(0,cs);
+                var html = template("tem",{li:lists});
+                $(".proBox").append(html);
+
+            }else{
+                cs=4;
+                var lists =list.slice(0,cs);
+                var html = template("tem",{li:lists});
+                $(".proBox").append(html);
+            }
+
+            document.body.onscroll=function(){
+                var lastList=$('#pro li').last();
+                if(lastList.offset().top-$('body').scrollTop()<lastList.height()*2){
+                    x+=4;
+                    var lists =list.slice(0+x,cs+x);
+                    $(".proBox").append(template("tem",{li:lists}));
+
+                }
+
+
+
+
+            }
+            run();
+
+        }
+    })
+
+};
+
+</script>
+</body>
+</html>

@@ -1,0 +1,163 @@
+a {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+}
+li {
+  list-style: none;
+}
+ul {
+  padding: 0;
+  margin: 0;
+}
+.clearfix:after {
+  content: "";
+  line-height: 0;
+  height: 0;
+  display: block;
+  clear: both;
+  visibility: hidden;
+}
+#header {
+  width: 100%;
+  height: 44px;
+  line-height: 44px;
+  font-size: 20px;
+  color: #ffffff;
+  background-color: #ff8b00;
+  padding: 0 8px;
+  box-shadow: 0px 2px 3px #dddddd;
+}
+#header > #arrow {
+  float: left;
+  padding-left: 20px;
+  display: block;
+  width: 18px;
+  height: 18px;
+  margin: 13px auto;
+  margin-left: 10px;
+  background: url("../images/leftarrow.svg") no-repeat 0 0;
+}
+#header > #title {
+  text-align: center;
+}
+#tit {
+  display: flex;
+  border-bottom: 1px solid #dadada;
+  position: relative;
+}
+#tit > #down {
+  position: absolute;
+  top: 37px;
+  width: 100%;
+}
+#tit > #down > a {
+  display: block;
+  border-bottom: 1px solid #dadada;
+  line-height: 40px;
+  padding: 0px 10px;
+  color: #5a5a5a;
+  background-color: #fff;
+  position: relative;
+}
+#tit > #down > .right:after {
+  content: '√';
+  display: block;
+  position: absolute;
+  height: 40px;
+  width: 40px;
+  color: red;
+  font-size: 20px;
+  top: 0;
+  right: 0;
+}
+#tit > .left {
+  float: left;
+  width: 100%;
+}
+#tit > .left > ul {
+  width: 100%;
+}
+#tit > .left > ul > li {
+  float: left;
+  line-height: 37px;
+  text-align: center;
+  width: 30%;
+  height: 37px;
+}
+#tit > .left > ul > li > a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  color: #5a5a5a;
+  font-size: 16px;
+}
+#tit > .left > ul > li > a .caret {
+  width: 8px;
+  height: 8px;
+  border-top: 7px dashed;
+}
+#tit > .search {
+  float: right;
+  width: 40px;
+  height: 40px;
+  border-left: 1px solid #dadada;
+  background: url("../images/search.svg") no-repeat 0 0;
+  -webkit-background-size: 22px 22px ;
+  background-size: 22px 22px ;
+  background-position: center center;
+}
+#product {
+  width: 100%;
+  background-color: #f1f1f1;
+  padding: 6px 0px;
+}
+#product > #box {
+  width: 98%;
+  margin: 0 auto;
+}
+#product > #box > li {
+  float: left;
+  width: 50%;
+  height: 50%;
+}
+#product > #box > li a {
+  display: block;
+  margin: 4px;
+  background-color: #ffffff;
+}
+#product > #box > li a > img {
+  width: 100%;
+}
+#product > #box > li a > .describ {
+  color: #333333;
+  padding: 0 6px;
+  height: 14px;
+  overflow: hidden;
+  font-size: 12px;
+  line-height: 14px;
+  margin-top: 6px;
+}
+#product > #box > li a > .sell {
+  padding: 6px;
+}
+#product > #box > li a > .sell > .price {
+  float: left;
+  color: #f8601d;
+  font-size: 20px;
+}
+#product > #box > li a > .sell > .price > em {
+  font-style: normal;
+  font-size: 10px;
+  color: #f8601d;
+}
+#product > #box > li a > .sell > button {
+  float: right;
+  border: none;
+  font-size: 14px;
+  color: #FFFFFF;
+  border-radius: 3px;
+  background-color: #ff9501;
+  padding: 4px 10px;
+}

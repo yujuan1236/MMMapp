@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <title>慢慢买手机版——国内折扣</title>
+    <!--icon图标-->
+    <link rel = "shortcut icon" href='favicon.ico'>
+    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css"/>
+    <link rel="stylesheet/less" href="css/moneyproduct.less"/>
+    <link rel="stylesheet/less" href="css/foot.less"/>
+    <script src="lib/less/less.js"></script>
+</head>
+<body>
+<header id="header">
+    <div>
+        <a href="index.html"><i class="glyphicon glyphicon-menu-left"></i></a>
+    </div>
+    <a href="#">
+
+    </a>
+
+    <h1>国内折扣</h1>
+
+</header>
+<main class="gnzk-main">
+</main>
+<section id="leader">
+    <ul class="tj">
+        <li><a href="index.html">首页 </a> > </li>
+        <li><a href="moneyctrl.html">超级推荐 </a> > </li>
+        <li class="productName"></li>
+    </ul>
+</section>
+<!--//公共底部-->
+<div class="footApp">
+    <div class="footTop">
+        <a href="http://m.manmanbuy.com/login.aspx">登录</a>
+        <a href="">注册</a>
+        <a href="#"><img src="images/foot-top.jpg" alt=""/>返回顶部</a>
+    </div>
+    <div class="foot">
+        <p>
+            <a href="" class="color">手机APP下载</a>
+            <a href="">慢慢买手机版</a>
+            -- 掌上比价平台
+        </p>
+
+        <p> m.manmanbuy.com</p>
+    </div>
+</div>
+
+<script type="text/template" id="temp">
+    {{each result as value i}}
+        <div class="contain">
+            <div class="cu-content">
+                <h3 class="title">{{value.productName}}</h3>
+                <h4>{{value.productPinkage}}</h4>
+                <div class="productInfo">
+                    <span class="mall">{{value.productFrom}}</span>
+                    <span class="addTime" style="margin-right: 4px;">{{value.productTime}}</span>
+                    <span class="author">{{value.productTips}}</span>
+                </div>
+                <div class="content clearfix">
+                    <div class="picwrap">
+                        {{#value.productImgSm}}
+                    </div>
+                    <div class="conn">
+                        <p>{{value.productInfo}}</p>
+                        <p></p>
+                        <p>{{value.productInfo1}}</p>
+                        <p></p>
+                        <p>{{#value.productImgLg}}</p>
+                        <p></p>
+                    </div>
+                    {{if value.productCity}}
+                    <center>
+                        <span class="s">
+                            <div class="drop" style="display: block;">
+                                {{#value.productCity}}
+                            </div>
+                        </span>
+                    </center>
+                    {{/if}}
+                    <div class="golink">
+                        <a href="javascript:;" target="_blank">前往购买</a>
+                    </div>
+                </div>
+            </div>
+            <div class="cu-content-wx" style="text-align: center; margin: 20px 10px;">
+                <img src="images/mmbweixin2.png" alt=""/>
+            </div>
+            {{#value.productComment}}
+        </div>
+    {{/each}}
+
+</script>
+<script src="lib/template/template.js"></script>
+<script src="lib/jquery/jquery.min.js"></script>
+<script>
+    $(function () {
+        var date = window.location.search;
+
+        $.ajax({
+
+            url: "http://139.199.157.195:9090/api/getmoneyctrlproduct" + date,
+            success: function (info) {
+                $(".gnzk-main").append(template("temp", info));
+                var productName = $('.title')[0].innerHTML.slice(0, 8) + '...';
+                //var productName = /^：\w+/.exec($('.title')[0].innerHTML).slice(1, 8) + '...';
+                //var productName = /\S/.exec($('.title')[0].innerHTML.replace(/：/,' ')).slice(0, 8) + '...';
+                //console.log(/^\：\w+/.exec($('.title')[0].innerHTML));
+                $('.productName')[0].innerHTML = productName;
+            }
+        })
+    })
+
+</script>
+</body>
+</html>

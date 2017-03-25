@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>慢慢买手机版——比价搜索</title>
+    <!--icon图标-->
+    <link rel = "shortcut icon" href='favicon.ico'>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <link rel="stylesheet" href="css/base.css"/>
+    <link rel="stylesheet" href="css/mn_history.css"/>
+    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.css"/>
+    <script src="lib/jquery/jquery.js"></script>
+</head>
+<body>
+<div class="head-logo">
+    <div class="logo">
+        <a href=""><img src="images/header_logo.png" alt=""/></a>
+    </div>
+    <div class="load">
+        <a href=""><img src="images/header_app.png" alt=""/></a>
+    </div>
+</div>
+<form action="">
+    <div class="search">
+        <input class="search-inp" type="text" value="" placeholder="请输入你想比价的商品"/>
+        <input class="search-btn" type="button" value="搜索"/>
+    </div>
+</form>
+<div class="mn_history clearfix">
+
+</div>
+<div class="footApp">
+    <div class="footTop">
+        <a href="http://m.manmanbuy.com/login.aspx">登录</a>
+        <a href="">注册</a>
+        <a href="#"><img src="images/foot-top.jpg" alt=""/>返回顶部</a>
+    </div>
+    <div class="foot">
+        <p>
+            <a href="" class="color">手机APP下载</a>
+            <a href="">慢慢买手机版</a>
+            -- 掌上比价平台
+        </p>
+
+        <p> m.manmanbuy.com</p>
+    </div>
+</div>
+</body>
+<script type="javascript/template" id="mn_tmp">
+    {{each result as title i}}
+    <div class="mn_history_content clearfix">
+        <div class="mn_history_top"><h4><a href="#">{{title.title}}</a></h4> <span class="mn_clickshow"
+                                                                                   data='{{title.titleId}}'><b><i>◇</i></b></span>
+        </div>
+        <div class="mn_history_bt clearfix">
+
+        </div>
+    </div>
+    {{/each}}
+</script>
+<script type="javascript/template" id="mn_detil">
+    <ul class="clearfix">
+        {{each result as category i}}
+        <li class="col-xs-4 mn_categoryson" data='{{category.categoryId}}'><a  data='{{category.categoryId}}' href="tvlist.html?categoryid={{category.categoryId}}&f={{category.sss}}&ff={{category.category}}&">{{category.category}}</a></li>
+        {{/each}}
+    </ul>
+
+</script>
+<script src="js/mn_histroy.js"></script>
+<script src="lib/template/template.js"></script>
+</html>

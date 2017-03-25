@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+
+    <!--增加视口-->
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <title>慢慢买比价网——手机版</title>
+    <!--icon图标-->
+    <link rel = "shortcut icon" href='favicon.ico'>
+    <!--引用第三方样式即bootstrap-->
+    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css"/>
+    <!--引用自己的样式文件-->
+    <link rel="stylesheet/less" href="css/gsproduct.less"/>
+    <link rel="stylesheet" href="css/foot.css"/>
+    <!--引用less.js-->
+    <script src='lib/less/less.min.js'></script>
+</head>
+<body>
+<!--头部区域-->
+<header id="header">
+    <a href="index.html" id="arrow"></a>
+
+    <p id="title">凑单品</p>
+</header>
+<section id="tit">
+    <div class="left">
+        <ul>
+            <li><a href="#" id="shop"><span>京东</span><span  class="caret"></span></a></li>
+            <li><a href="#" id="area"><span>华北</span><span  class="caret"></span></a></li>
+            <li><a href="#"><span>1元</span><span   class="caret"></span></a></li>
+        </ul>
+    </div>
+    <div class="search">
+    </div>
+    <div id="down">
+
+    </div>
+</section>
+<section id="product">
+        <!--因为li浮动所以清除浮动-->
+        <ul id="box" class="clearfix">
+        </ul>
+</section>
+
+
+<!--下拉模板店-->
+<script type="text/html" id="downlist">
+    {{each result as value i}}
+    <a href="#"  shopid={{value.shopId}} >{{value.shopName}}</a>
+    {{/each}}
+</script>
+
+<!--下拉模板店区域-->
+<script type="javascript/template" id="downlistare">
+    {{each result as value i}}
+    <a href="#" areaid={{value.areaId}}>{{value.areaName}}</a>
+    {{/each}}
+</script>
+<!--product模板店区域-->
+<script type="text/html" id="productare">
+    {{each result as value i}}
+    <li>
+        <a href="#">
+            <img src={{value.productImg}} alt=""/>
+            <div class="describ">{{value.productName}}</div>
+            <div class="sell clearfix">
+                <p class="price"><em>{{value.bb}}</em>{{value.productPrice}}</p>
+                <button>去凑单</button>
+            </div>
+        </a>
+    </li>
+    {{/each}}
+</script>
+
+
+
+<!--//公共底部-->
+<div class="footApp">
+    <div class="footTop">
+        <a href="http://m.manmanbuy.com/login.aspx">登录</a>
+        <a href="">注册</a>
+        <a href="#"><img src="images/foot-top.jpg" alt=""/>返回顶部</a>
+    </div>
+    <div class="foot">
+        <p>
+            <a href="" class="color">手机APP下载</a>
+            <a href="">慢慢买手机版</a>
+            -- 掌上比价平台
+        </p>
+        <p> m.manmanbuy.com</p>
+    </div>
+</div>
+<!--引用Jq-->
+<script src='lib/jquery/jquery.js'></script>
+<!--引用bootstrap.js-->
+<stript src='lib/bootstrap/js/bootstrap.min.js'></stript>
+<!--引用模板js-->
+<script src="lib/template/template.js"></script>
+<!--引用自己js-->
+<script src="js/gsproduct.js"></script>
+</body>
+</html>

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <title>慢慢买比价网——手机版</title>
+    <!--icon图标-->
+    <link rel = "shortcut icon" href='favicon.ico'>
+</head>
+<link rel="stylesheet" href="css/mmm.css"/>
+<link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css"/>
+<body class="gnzk">
+<header class="header">
+    <a href="./inlanddiscount.html" class="icon-back">
+        <i class="back"></i>
+    </a>
+
+    <h1>国内折扣</h1>
+
+    <a href="javascript;" class="icon-down"></a>
+
+
+</header>
+<main class="gnzk-main gnzk-show">
+</main>
+<main class="comment">
+
+    <div class="container">
+        <img src="images/mmbweixin2.png" alt="" class="wx"/>
+
+        <form action="" class="clearfix">
+        <h3>发表评论</h3>
+        <textarea name=""  id='com'></textarea>
+        <input type="button" id="button" value="发表评论"/>
+
+    </form>
+      <div class="newMessage">
+          <h3>最新评论</h3>
+          <div class="head">
+              <img src="" alt=""/>
+          </div>
+
+
+
+         <div class="message">
+             <p class="messageTit"> <b class="messageName">二二</b> <b class="messageTime">11,11,1</b></p>
+            <p class="messageCon">买买买 ，</p>
+         </div>
+      </div>
+</div>
+</main>
+
+<footer class="footer">
+    <div class="footer-menu">
+
+        <ul class="tj">
+            <li><a href="index.html">首页</a>></li>
+            <li><a href="moneyctrl.html">超级推荐</a>></li>
+            <li class="big">超级推荐</li>
+        </ul>
+    </div>
+    <div class="footer-bottom">
+        <div class="container">
+            <a href="" class="col-xs-4 bor">登陆</a>
+            <a href="" class="col-xs-4 bor">注册</a>
+            <a href="" class="col-xs-4 bor"> <img src="http://www.zuyushop.com/wap/images/top.jpg" alt="" id="To"/> 回到顶部</a>
+        </div>
+    </div>
+    <div class="footer-src clearfix">
+        <ul class="clearfix">
+            <li><a href="" class="red">手机app下载</a>
+            </li>
+            <li><a href="">慢慢买手机版</a></li>
+
+            <li>app平台</li>
+        </ul>
+        <p>www.manmanbuy.com</p>
+
+    </div>
+</footer>
+
+
+<script type="javascript/template" id="temp">
+    {{each result as value i}}
+
+    <div class="container pro-show">
+        <h3 class="tit">
+            {{value.productName}}
+        </h3>
+        <p class="mon">
+            {{value.productPrice}}
+        </p>
+
+        <div class="info">
+            <span class="from">
+                {{value.productFrom}}
+            </span>
+            <span class="addTime">
+                {{value.productTime}}
+            </span>
+    <span class="aut">
+        {{value.productTips}}
+
+    </span>
+        </div>
+        <div class="gpg">
+            {{# value.productImg }}
+
+        </div>
+
+        <p class="pro-comcon">
+            {{value.productInfo}}
+        </p>
+        <div class="con">
+             {{# value.productImg }}
+        </div>
+        <a href="" class="linkToBuy">
+            前往购买
+        </a>
+    </div>
+    {{/each}}
+
+</script>
+<script src="lib/template/template.js"></script>
+<script src="lib/jquery/jquery.min.js"></script>
+<script>
+    $(function(){
+       var date = window.location.href.toString().search(/\?productid=+/);
+        var result=window.location.href.toString().slice((date));
+        $('#To').click(function(){
+            $(body).scrollTop(0);
+        })
+        $.ajax({
+            type: "get",
+            url: "http://139.199.157.195:9090/api/getdiscountproduct"+result+"",
+            success: function (s) {
+                console.log();
+                $(".gnzk-show").append(template("temp",s));
+              var x=  $('.tit')[0].innerHTML.replace(/\s/g,'').slice(0,3)+'...';
+                $('.big')[0].innerHTML=x;
+
+            }
+            })
+
+
+
+    })
+
+</script>
+</body>
+</html>

@@ -1,0 +1,113 @@
+/*����ͨ��start*/
+#header {
+  height: 44px;
+  background-color: #ff841d;
+  width: 100%;
+}
+#header > div:nth-child(1) {
+  width: 40px;
+  height: 44px;
+  float: left;
+}
+#header > div:nth-child(1) a {
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  position: relative;
+  text-align: center;
+  line-height: 50px;
+}
+#header > div:nth-child(1) a > i {
+  color: #fff;
+  font-size: 17px;
+}
+#header h1 {
+  margin: 0;
+  font-size: 20px;
+  color: #fff;
+  text-align: center;
+  line-height: 44px;
+}
+#header > a {
+  display: inline-block;
+  float: right;
+  width: 50px;
+  height: 44px;
+  background: url("../images/header_app.png") no-repeat center center;
+  -webkit-background-size: 32px;
+  background-size: 32px;
+}
+/*����ͨ��end*/
+/*��Ʒ����*/
+section ul {
+  padding: 0;
+  margin: 0;
+}
+section ul li {
+  list-style: none;
+  padding: 14px 8px;
+}
+section ul li a {
+  display: block;
+}
+section ul li a > .pic {
+  float: left;
+  width: 110px;
+}
+section ul li a > .pic img {
+  width: 100px;
+  height: 100px;
+}
+section ul li a > .title {
+  color: #333;
+  -ms-word-break: break-all;
+  word-break: break-all;
+  font-size: 15px;
+  line-height: 19px;
+  min-height: 57px;
+  text-align: left;
+  font-weight: normal;
+  text-decoration: none;
+}
+section ul li a > .title span {
+  color: #ff6c00;
+}
+section ul li a .other {
+  margin-top: 8px;
+  color: #a1a1a1;
+}
+section ul li a .other span:nth-child(1) {
+  font-size: 12px;
+  float: left;
+}
+section ul li a .other span:nth-child(2) {
+  float: right;
+  font-size: 12px;
+}
+/*����ҳ����*/
+.page {
+  width: 100%;
+  text-align: center;
+}
+.page span {
+  width: 33%;
+  float: left;
+}
+.page span a {
+  padding: 8px 20px;
+  background-color: #d4d4d4;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  border-bottom: 1px solid #bababa;
+  box-shadow: 0 0 1px #666;
+  text-align: center;
+  font-size: 14px;
+  line-height: 32px;
+}
+.page span select {
+  border: 1px solid #bababa;
+  font-size: 16px;
+  padding: 16px 15px;
+  height: 32px;
+}

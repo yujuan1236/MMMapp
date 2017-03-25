@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <!--引入bootstrap-->
+    <link rel="stylesheet" href="./lib/bootstrap/css/bootstrap.min.css"/>
+    <!--引入自己的css-->
+    <link rel="stylesheet/less" href="./css/couponproduct.less"/>
+    <!--引入底部css-->
+    <link rel="stylesheet/less" href="./css/foot.less"/>
+    <!--引入less-->
+    <script src="./lib/less/less.min.js"></script>
+    <title>慢慢买手机版——优惠券</title>
+    <!--icon图标-->
+    <link rel = "shortcut icon" href='favicon.ico'>
+</head>
+<body>
+<!--顶部通栏-->
+<header id="header">
+    <div>
+        <a href="index.html"><i class="glyphicon glyphicon-menu-left"></i></a>
+    </div>
+    <a href="#">
+
+    </a>
+
+    <h1>肯德基优惠卷</h1>
+
+</header>
+<!--优惠券内容-->
+<main>
+    <div class="text">
+        <p>--点餐前出示手机中的优惠券，即可享受优惠--</p>
+    </div>
+    <ul class="content">
+
+    </ul>
+</main>
+<!--//公共底部-->
+<div class="footApp">
+    <div class="footTop">
+        <a href="http://m.manmanbuy.com/login.aspx">登录</a>
+        <a href="">注册</a>
+        <a href="#"><img src="images/foot-top.jpg" alt=""/>返回顶部</a>
+    </div>
+    <div class="foot">
+        <p>
+            <a href="" class="color">手机APP下载</a>
+            <a href="">慢慢买手机版</a>
+            -- 掌上比价平台
+        </p>
+
+        <p> m.manmanbuy.com</p>
+    </div>
+</div>
+<!--引入jquery-->
+<script src="./lib/jquery/jquery.min.js"></script>
+<!--引入bootstrap-->
+<script src="./lib/bootstrap/js/bootstrap.min.js"></script>
+<!--引入template-->
+<script src="./lib/template/template.js"></script>
+<!--引入自己的js文件-->
+<!--<script src="./js/coupon.js"></script>-->
+<script type="text/html" id="html">
+    {{each result as value i}}
+    <li>
+        <a href="#">
+            <div class="img">
+                {{#value.couponProductImg}}
+            </div>
+            <div class="info">
+                <div class="title">
+                    {{value.couponProductName}}
+                </div>
+                <div class='money'>{{value.couponProductPrice}}</div>
+                <div class="time">
+                    {{value.couponProductTime}}
+                </div>
+            </div>
+        </a>
+    </li>
+    {{/each}}
+</script>
+<script>
+    $(function () {
+        var id = window.location.search.toString()
+        console.log(id)
+        $.ajax({
+            url: 'http://139.199.157.195:9090/api/getcouponproduct' + id,
+            success: function (data) {
+                var html = template('html', data)
+                console.log(html)
+                $('main>.content').html(html)
+            }
+        })
+    })
+</script>
+</body>
+</html>

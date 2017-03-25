@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>慢慢买比价网——手机版</title>
+    <!--icon图标-->
+    <link rel = "shortcut icon" href='favicon.ico'>
+    <link rel="stylesheet/less" href="css/base.less"/>
+    <!--引用第三方的样式-->
+    <link rel="stylesheet" href="./lib/bootstrap/css/bootstrap.min.css">
+    <!--引用样式重置文件-->
+    <link rel="stylesheet/less" href="css/bijia.less">
+
+
+    <!--引用公共底部的样式文件-->
+    <link rel="stylesheet/less" href="css/foot.less"/>
+    <!--引用less.js-->
+    <script src="./lib/less/less.min.js"></script>
+</head>
+
+<body>
+<div class="head-logo">
+    <div class="logo">
+        <a href=""><img src="images/header_logo.png" alt=""/></a>
+    </div>
+    <div class="load">
+        <a href=""><img src="images/header_app.png" alt=""/></a>
+    </div>
+</div>
+<form action="">
+    <div class="search">
+        <input class="search-inp" type="text" value="" placeholder="请输入你想比价的商品"/>
+        <input class="search-btn" type="button" value="搜索"/>
+    </div>
+</form>
+<div class="nav">
+    <ul>
+        <li><a href="index.html">首页</a></li>
+        <li><a href="category.html">分类大全</a></li>
+        <li><a class="temp" href="">电视机</a></li>
+    </ul>
+    <div class="choose">
+        <a href="">筛选</a>
+    </div>
+</div>
+<div class="product-info">
+
+</div>
+
+
+<div class="product-com">
+    <div class="com-tit">网友评论</div>
+    <div class="com-list">
+        <ul>
+        </ul>
+    </div>
+</div>
+<!--//公共底部-->
+<div class="footApp">
+    <div class="footTop">
+        <a href="http://m.manmanbuy.com/login.aspx">登录</a>
+        <a href="">注册</a>
+        <a href="#"><img src="images/foot-top.jpg" alt=""/>返回顶部</a>
+    </div>
+    <div class="foot">
+        <p>
+            <a href="" class="color">手机APP下载</a>
+            <a href="">慢慢买手机版</a>
+            -- 掌上比价平台
+        </p>
+        <p> m.manmanbuy.com</p>
+    </div>
+</div>
+</body>
+
+
+<!--引用jq-->
+<script src="./lib/jquery/jquery.js"></script>
+<!--引用bootstrap.js-->
+<script src="./lib/bootstrap/js/bootstrap.min.js"></script>
+<!--商品详情的模板-->
+<script type="text/template" id="productTmp">
+    <div class="product-top">
+        {{each result as value i}}
+        <div class="product-tit">
+           {{#value.productName}}
+        </div>
+        <div class='product-img'>{{#value.productImg}}</div>
+        <div class="product-shoucang"><a href="#"><img src="http://www.zuyushop.com/wap/images/sc.jpg" alt=""/></a></div>
+        {{/each}}
+    </div>
+    <div class="product-bottom">
+        {{each result as value i}}
+        {{#value.bjShop}}
+        {{/each}}
+    </div>
+    <div class="note">
+        * 实际价格以各网站列出的实时售价为准，我们提供的价格可能有数小时至数日的延迟。
+    </div>
+</script>
+<!--//下面评论的模板-->
+<script type="text/template" id="comTmp">
+   {{each result as value i }}
+   <li>
+       <div class="d1 clearfix">
+           <div class="com-name">{{#value.comName}}</div>
+           <div class="com-date">{{#value.comTime}}</div>
+       </div>
+       <div class="com-add clearfix">
+           <div class="com-star">★★★★★</div>
+           <div class="com-add1">{{#value.comFrom}}</div>
+       </div>
+       <div class="com-con clearfix">{{#value.comContent}}</div>
+   </li>
+    {{/each}}
+</script>
+<!--引用template.js-->
+<script src="./lib/template/template.js"></script>
+<!--引用自己的js-->
+<script src="js/bijia.js"></script>
+
+</html>

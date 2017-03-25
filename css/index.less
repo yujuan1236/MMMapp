@@ -1,0 +1,157 @@
+/*头部区域*/
+
+@yelCor: #ff841d;
+#header {
+  background-color: @yelCor;
+  height: 50px;
+  padding: 10px;
+  > .logo {
+    > img {
+      height: 25px;
+    }
+  }
+  > .app {
+    float: right;
+    > img {
+      height: 34px;
+    }
+  }
+}
+
+/*搜索区域*/
+
+#search {
+  padding: 10px;
+  background-color: #fff;
+  > form {
+    padding-right: 70px;
+    position: relative;
+    > input {
+      border-radius: 15px;
+      height: 30px;
+      border: none;
+    }
+    > input[type="search"] {
+      width: 100%;
+      background: #f1f1f1;
+      // padding-left: 10px;
+      text-indent: 15px;
+    }
+    > input[type="submit"] {
+      position: absolute;
+      top: 0;
+      right: 0;
+      background: @yelCor;
+      color: #fff;
+      width: 63px;
+    }
+  }
+}
+
+//主页菜单
+#menu {
+  padding-top: 10px;
+  padding-bottom: 5px;
+  > .row {
+    background-color: #fff;
+    padding: 10px 0;
+    > div {
+      text-align: center;
+      float: left;
+      overflow: hidden;
+      margin-top: 15px;
+      > a {
+        display: block;
+        > img {
+          width: 50px;
+        }
+        > p {
+          text-align: center;
+          margin-top: 5px;
+          font-size: 12px;
+        }
+      }
+    }
+  }
+}
+
+//超值折扣推荐
+#discount {
+  .discount-title {
+    background-color: #FF9000;
+    position: relative;
+    > h5 {
+      height: 35px;
+      line-height: 35px;
+      font-size: 16px;
+      color: #fff;
+      padding-left: 20px;
+    }
+    > img {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      width: 20px;
+    }
+  }
+  > .discount-list {
+    padding: 0;
+    margin: 0;
+    li {
+      list-style: none;
+      padding: 14px 8px;
+      background-color: #fff;
+      margin-bottom: 1px;
+      a {
+        display: block;
+        > .pic {
+          float: left;
+          width: 110px;
+          img {
+            width: 100px;
+            height: 100px;
+          }
+        }
+        .title {
+          color: #333;
+          -ms-word-break: break-all;
+          word-break: break-all;
+          font-size: 15px;
+          line-height: 19px;
+          min-height: 57px;
+          text-align: left;
+          font-weight: normal;
+          text-decoration: none;
+          > p {
+            font-size: 14px;
+            color: #ff6c00;
+            margin-top: 5px;
+          }
+        }
+        .other {
+          color: #a1a1a1;
+          span:nth-child(1) {
+            font-size: 12px;
+            float: left;
+          }
+          span:nth-child(2) {
+            float: right;
+            font-size: 12px;
+          }
+        }
+      }
+    }
+  }
+  > .discount-more {
+    padding: 10px;
+    > a {
+      display: block;
+      width: 100%;
+      border: 1px solid #ccc;
+      text-align: center;
+      height: 32px;
+      line-height: 32px;
+      border-radius: 5px;
+    }
+  }
+}

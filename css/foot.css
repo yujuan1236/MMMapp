@@ -1,0 +1,58 @@
+*,
+body,
+html {
+  margin: 0;
+  padding: 0;
+}
+a {
+  color: #000;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+}
+.footApp {
+  width: 100%;
+}
+.footApp > .footTop {
+  background: #efefef;
+  border-top: 1px solid #c4c4c4;
+  border-bottom: 1px solid #c4c4c4;
+  height: 34px;
+  line-height: 34px;
+  margin-top: 25px;
+  clear: both;
+}
+.footApp > .footTop > a {
+  box-sizing: border-box;
+  float: left;
+  font-size: 14px;
+  border-right: 1px solid #c4c4c4;
+  text-align: center;
+  width: 30%;
+  color: #000;
+}
+.footApp > .footTop > a:hover {
+  text-decoration: none;
+}
+.footApp > .footTop > a:nth-last-of-type(1) {
+  border-right: none;
+}
+.footApp > .footTop > a:nth-last-of-type(1) > img {
+  vertical-align: middle;
+  margin-top: -5px;
+  margin-right: 2px;
+  width: 15px;
+  height: 15px;
+}
+.footApp > .foot {
+  background: #efefef;
+  text-align: center;
+  font-size: 12px;
+  padding: 15px 0;
+  color: #666;
+}
+.footApp > .foot a:nth-of-type(1).color {
+  color: #e4393c;
+  font-weight: 500;
+}

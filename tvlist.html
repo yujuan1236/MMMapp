@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <title>慢慢买比价网——手机版</title>
+    <!--icon图标-->
+    <link rel = "shortcut icon" href='favicon.ico'>
+    <!--引用less时，必须在rel里面申明less文件-->
+    <link rel="stylesheet/less" href="css/tvlist.less"/>
+    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css"/>
+    <script src="lib/less/less.min.js"></script>
+    <script src="lib/template/template.js"></script>
+    <script src="lib/jquery/jquery.min.js"></script>
+    <script src="lib/bootstrap/js/bootstrap.min.js"></script>
+</head>
+<body>
+<header id="header">
+    <a class="logo" href="http://m.manmanbuy.com/"><img src="images/header_logo.png" alt=""/></a>
+    <a class="app" href="http://m.manmanbuy.com/?o=download"><img src='images/header_app.png' alt=""/></a>
+</header>
+<section id="search">
+    <input type="text" placeholder="请输入你想比价的商品"/>
+    <button>搜索</button>
+</section>
+
+<section class="nav">
+    <a href="index.html">首页</a>><a id="cat" href="category.html"></a>><a id="det" href="#"></a>
+    <a class="fr btn">筛选</a>
+</section>
+
+<section id="box">
+
+</section>
+
+<div class="button">
+    <button id="up" class="fl">上一页</button>
+    <select name="" id="select">
+        <option value="1" selected='selected'>第1页</option>
+        <option value="2">第2页</option>
+        <option value="3">第3页</option>
+    </select>
+
+    <button id="down" class="fr">下一页</button>
+
+</div>
+
+
+<!--box模板-->
+<script type="text/html" id="boxlist">
+    {{each result as value i}}
+    <div  class="clearfix">
+        <a href="bijia.html?productid={{value.productId}}&titName={{value.titName}}">
+            {{#value.productImg}}
+            <div>
+                <h5>{{value.productName}}</h5>
+                <p>{{value.productPrice}}</p>
+                <span>{{value.productQuote}}</span><span>{{value.productCom}}</span>
+            </div>
+        </a>
+    </div>
+    {{/each}}
+</script>
+
+
+<script src="js/tvlist.js"></script>
+</body>
+</html>

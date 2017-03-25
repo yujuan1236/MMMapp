@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <title>慢慢买比价网——手机版</title>
+    <!--icon图标-->
+    <link rel = "shortcut icon" href='favicon.ico'>
+    <!--引入第三方样式-->
+    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.css"/>
+    <!--引入重置样式-->
+    <!--<link rel="stylesheet/less" href="css/base.less"/>-->
+    <!--引入自己的样式-->
+    <link rel="stylesheet/less" href="css/index.less"/>
+    <!--引入底部less-->
+    <link rel="stylesheet/less" href="css/foot.less"/>
+    <!--引入less.js-->
+    <script src="lib/less/less.js"></script>
+</head>
+<body>
+<!--头部-->
+<header id="header">
+    <a href="#" class="logo"><img src="images/header_logo.png" alt=""/></a>
+    <a href="#" class="app"><img src="images/header_app.png" alt=""/></a>
+</header>
+<!--搜索-->
+<section id="search">
+    <form action>
+        <input type="search" placeholder="请输入你想比价的商品"/>
+        <input type="submit" value="搜索"/>
+    </form>
+</section>
+<!--菜单-->
+<section id="menu">
+    <div class="row">
+
+    </div>
+</section>
+<section id="discount">
+    <div class="discount-title">
+        <h5>超值折扣推荐</h5>
+        <img src="images/header_app.png" alt=""/>
+    </div>
+    <ul class="discount-list">
+
+    </ul>
+    <div class="discount-more">
+        <a href="moneyctrl.html">更多优惠信息>></a>
+    </div>
+    <div class="discount-title">
+        <h5>品牌排行</h5>
+        <img src="images/header_app.png" alt=""/>
+    </div>
+</section>
+<!--公共底部-->
+<div class="footApp">
+    <div class="footTop">
+        <a href="http://m.manmanbuy.com/login.aspx">登录</a>
+        <a href="">注册</a>
+        <a href="#"><img src="images/foot-top.jpg" alt=""/>返回顶部</a>
+    </div>
+    <div class="foot">
+        <p>
+            <a href="" class="color">手机APP下载</a>
+            <a href="">慢慢买手机版</a>
+            -- 掌上比价平台
+        </p>
+        <p> m.manmanbuy.com</p>
+    </div>
+</div>
+
+<!--菜单模板-->
+<script type="text/template" id="tpl">
+    {{each result as value i}}
+        <div class="col-xs-3">
+            <a href="{{value.titlehref}}">
+                {{#value.img}}
+                <p>{{value.name}}</p>
+            </a>
+        </div>
+    {{/each}}
+</script>
+<!--折扣list模板-->
+<script type="text/html" id="html">
+    {{each result as value i}}
+    <li class="clearfix ui-border-b">
+        <a href="moneyproduct.html?productid={{value.productId}}">
+            <div class="pic">{{#value.productImgSm}}</div>
+            <div class="clearfix info">
+                <div class="title">{{value.productName}}
+                    <p>{{value.productPinkage}}</p>
+                </div>
+                <div class="other"><span class="mall">{{value.productFrom}} | {{value.productTime}}</span>
+                    <span class="comment">
+                        <i class="glyphicon glyphicon-edit">&nbsp;</i>
+                        {{value.productComCount.replace("有","").replace("人评论","")}}
+                    </span>
+                </div>
+            </div>
+        </a>
+    </li>
+    {{/each}}
+</script>
+
+<!--引入jq-->
+<script src="lib/jquery/jquery.js"></script>
+<!--引入第三方js-->
+<script src="lib/bootstrap/js/bootstrap.js"></script>
+<!--引入模板引擎-->
+<script src="lib/template/template.js"></script>
+<!--引入自己的js-->
+<script src="js/index.js"></script>
+</body>
+</html>
